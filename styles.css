@@ -16,7 +16,7 @@ body {
   place-items: center;
 }
 
-.screen {
+.arena {
   width: 960px;
   aspect-ratio: 16 / 9;
   background: #3d2559;
@@ -28,7 +28,7 @@ body {
   box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.25);
 }
 
-.posição-inimigo {
+.posição-treiner {
     position: absolute;
     top: 64%;
     left: 178px;
@@ -41,7 +41,7 @@ body {
     z-index: 0;
 }
 
-.posição-player {
+.posição-mago {
     position: absolute;
     top: 154px;
     right: 164px;
@@ -54,7 +54,7 @@ body {
 }
 
 
-.hud {
+.caixa {
   position: absolute;
   width: 260px;
   min-height: 92px;
@@ -65,32 +65,28 @@ body {
   display: grid;
 }
 
-.hud.top-left {
+.caixa.mago {
   left: 0px;
   top: 0px;
 }
 
-.hud.bottom-left {
+.caixa.bottom-left {
   left: 0px;
   bottom: 0px;
 }
 
-.hud-title {
+.caixa-nome {
   font-size: 2rem;
   letter-spacing: 0.08em;
   font-weight: bold;
 }
 
-.hud-subtitle {
+.caixa-level {
   font-size: 2rem;
   font-weight: bold;
 }
 
-.hud.small {
-  font-size: 0.95rem;
-}
-
-.hud-bar {
+.caixa-vidaMago {
     width: 260px;
     height: 21px;
     top: 37px;
@@ -100,7 +96,7 @@ body {
     position: relative;
 }
 
-.hud-bar span {
+.caixa-vidaMago span {
   display: block;
   position: absolute;
   inset: 0;
@@ -108,7 +104,7 @@ body {
   background: #4baf3d;
 }
 
-.hud-barra {
+.caixa-vidaTrainer {
     width: 260px;
     height: 21px;
     top: -111px;
@@ -118,7 +114,7 @@ body {
     position: relative;
 }
 
-.hud-barra span {
+.caixa-vidaTrainer span {
   display: block;
   position: absolute;
   inset: 0;
@@ -127,7 +123,7 @@ body {
 }
 
 
-.action-panel {
+.caixa-acoes {
   position: absolute;
   right: 0px;
   bottom: 0px;
@@ -142,7 +138,7 @@ body {
   z-index: 1;
 }
 
-.action-title {
+.caixa-texto {
   border: 4px solid #40116e;
   padding: 5px;
   height: 90px;
@@ -150,17 +146,17 @@ body {
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  background: #f7f3ff;
+  background: #fff;
   color: #40116e;
 }
 
-.action-grid {
+.caixa-movies {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 12px;
 }
 
-.action-btn {
+.botao-acao {
   background: #fff;
   border: 6px solid #40116e;
   color: #40116e;
@@ -171,7 +167,7 @@ body {
   aspect-ratio: 14 / 10;
 }
 
-.action-btn:hover {
+.botao-acao:hover {
   background: #f7f3ff;
 }
 
