@@ -10,6 +10,7 @@
 }
 
 body {
+  font-family: "Press Start 2P", system-ui;
   margin: 0;
   min-height: 100vh;
   display: grid;
@@ -19,38 +20,16 @@ body {
 .arena {
   width: 960px;
   aspect-ratio: 16 / 9;
-  background: #3d2559;
+  background-image: url("assets/background.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   padding: 18px;
   position: relative;
   display: grid;
   grid-template-columns: 1.4fr 1fr;
   gap: 18px;
   box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.25);
-}
-
-.posição-treiner {
-    position: absolute;
-    top: 64%;
-    left: 178px;
-    transform: translateY(-50%);
-    width: 260px;
-    height: 80px;
-    background-color: #C4B89D;
-    border-radius: 50%;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-    z-index: 0;
-}
-
-.posição-mago {
-    position: absolute;
-    top: 154px;
-    right: 164px;
-    width: 257px;
-    height: 80px;
-    background-color: #C4B89D;
-    border-radius: 50%;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-    z-index: 1;
 }
 
 
@@ -76,20 +55,20 @@ body {
 }
 
 .caixa-nome {
-  font-size: 2rem;
+  font-size: 1.8rem;
   letter-spacing: 0.08em;
   font-weight: bold;
 }
 
 .caixa-level {
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: bold;
 }
 
 .caixa-vidaMago {
-    width: 260px;
-    height: 21px;
-    top: 37px;
+  width: 260px;
+  height: 21px;
+  top: 37px;
     left: -16px;
     border: 5px solid #f0dd47;
     background: #40116e;
@@ -101,13 +80,13 @@ body {
   position: absolute;
   inset: 0;
   width: 100%;
-  background: #4baf3d;
+  background: #63e552;
 }
 
 .caixa-vidaTrainer {
     width: 260px;
     height: 21px;
-    top: -111px;
+    top: -95px;
     left: -16px;
     border: 5px solid #f0dd47;
     background: #40116e;
@@ -119,7 +98,7 @@ body {
   position: absolute;
   inset: 0;
   width: 100%;
-  background: #4baf3d;
+  background: #63e552;
 }
 
 
@@ -142,7 +121,7 @@ body {
   border: 4px solid #40116e;
   padding: 5px;
   height: 90px;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -171,3 +150,30 @@ body {
   background: #f7f3ff;
 }
 
+
+  .personagem{
+    position: absolute;
+    z-index: 2;
+  }
+  
+  .personagem img {
+    position: relative;
+    width: 50%;
+    height: auto;
+    left: 60%;
+    top: 50%;
+    transform: translate(-50%, 60%);
+  }
+
+  .inimigo{
+    position: absolute;
+    z-index: 2;
+  }
+  
+  .inimigo img {
+    position: relative;
+    width: 50%;
+    height: auto;
+    left: 130%;
+    transform: translate(-50%, 0%);
+  }
