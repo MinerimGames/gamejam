@@ -5,42 +5,76 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>IsleideVerse</title>
-  <link rel="stylesheet" href="styles.css" />
+
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-  <div class="arena">
-    <div class="personagem">
-      <img src="assets/isleideDeCostas.png" alt="Isleide de Costas">
-    </div>
-    <div class="inimigo">
-      <img src="assets/isleideFurry.png" alt="Isleide Furry">
-    </div>
-  <div class="caixa inimigo">
-    <div class="caixa-nome">Isleide Furry</div>
-    <div class="caixa-level">NÍVEL 12</div>
-    <div class="caixa-vidaInimigo"><span></span></div>
-  </div>
-  
-  <div class="caixa personagem">
-    <div class="caixa-nome">Isleide</div>
-    <div class="caixa-level">NÍVEL 9</div>
-    <div class="caixa-vidaPersonagem"><span></span></div>
-  </div>
 
-    <div class="caixa-acoes">
-      <div class="caixa-texto">QUAL A SUA AÇÃO?</div>
-      <div class="caixa-movies">
-        <button class="botao-acao"></button>
-        <button class="botao-acao"></button>
-        <button class="botao-acao"></button>
-        <button class="botao-acao"></button>
+  <div class="arena">
+
+    <!-- STATUS INIMIGO -->
+    <div class="caixa inimigo">
+      <div class="caixa-nome">Isleide Newton</div>
+      <div class="caixa-level">NÍVEL 12</div>
+      <div class="caixa-vida">
+        <span></span>
       </div>
     </div>
+
+    <!-- STATUS PLAYER -->
+    <div class="caixa personagem-status">
+      <div class="caixa-nome">Isleide</div>
+      <div class="caixa-level">NÍVEL 9</div>
+      <div class="caixa-vida">
+        <span></span>
+      </div>
+    </div>
+
+    <!-- PLAYER -->
+    <div class="personagem">
+      <img src="assets/JogadorCostas0.png" alt="Jogador">
+    </div>
+
+    <!-- INIMIGO -->
+    <div class="inimigo-sprite">
+      <img src="assets/Newton0.png" alt="Inimigo">
+    </div>
+
+    <!-- MENU -->
+    <div class="caixa-acoes">
+
+      <div class="caixa-texto">
+        RESOLVA A CONTA!
+      </div>
+
+      <div class="desafio-matematico">
+        <span id="slotX">?</span>
+        <span id="slotOperacao">+</span>
+        <span id="slotY">?</span>
+      </div>
+
+      <input type="number" id="respostaUsuario" placeholder="RESPOSTA">
+
+      <button class="botao-acao" onclick="verificarResposta()">
+        RESPONDER
+      </button>
+
+      <button class="botao-acao" onclick="desafio(1)">
+        INICIAR
+      </button>
+
+    </div>
+
   </div>
+
+  <script src="challenge.js"></script>
+
 </body>
 
 </html>
