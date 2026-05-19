@@ -44,12 +44,12 @@ body {
   display: grid;
 }
 
-.caixa.mago {
+.caixa.inimigo {
   left: 0px;
   top: 0px;
 }
 
-.caixa.bottom-left {
+.caixa.personagem {
   left: 0px;
   bottom: 0px;
 }
@@ -65,7 +65,7 @@ body {
   font-weight: bold;
 }
 
-.caixa-vidaMago {
+.caixa-vidaInimigo {
   width: 260px;
   height: 21px;
   top: 37px;
@@ -75,7 +75,7 @@ body {
     position: relative;
 }
 
-.caixa-vidaMago span {
+.caixa-vidaInimigo span {
   display: block;
   position: absolute;
   inset: 0;
@@ -83,7 +83,7 @@ body {
   background: #63e552;
 }
 
-.caixa-vidaTrainer {
+.caixa-vidaPersonagem {
     width: 260px;
     height: 21px;
     top: -95px;
@@ -93,7 +93,7 @@ body {
     position: relative;
 }
 
-.caixa-vidaTrainer span {
+.caixa-vidaPersonagem span {
   display: block;
   position: absolute;
   inset: 0;
