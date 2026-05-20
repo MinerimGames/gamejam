@@ -32,8 +32,8 @@ function desafio(fase) {
 
     // FASES 4 a 6: Soma de 2 algarismos (10 a 99)
     else if (fase === 4 || fase === 5 || fase === 6) {
-        x = Math.floor(Math.random() * 90) + 10;
-        y = Math.floor(Math.random() * 90) + 10;
+        x = Math.floor(Math.random() * 39) + 10;
+        y = Math.floor(Math.random() * 19) + 10;
         conta = x + y;
         operacao = "+";
     }
@@ -48,7 +48,7 @@ function desafio(fase) {
 
     // FASES 10 a 12: Subtração de 2 algarismos, garantindo X > Y
     else if (fase === 10 || fase === 11 || fase === 12) {
-        x = Math.floor(Math.random() * 89) + 10;
+        x = Math.floor(Math.random() * 39) + 10;
         y = Math.floor(Math.random() * (x - 10)) + 10; 
         conta = x - y;
         operacao = "-";
@@ -64,8 +64,8 @@ function desafio(fase) {
 
     // FASES 15 e 16: Multiplicação de 2 algarismos (10 a 99)
     else if (fase === 15 || fase === 16) {
-        x = Math.floor(Math.random() * 90) + 10;
-        y = Math.floor(Math.random() * 90) + 10;
+        x = Math.floor(Math.random() * 89) + 10;
+        y = Math.floor(Math.random() * 89) + 10;
         conta = x * y;
         operacao = "*";
     }
