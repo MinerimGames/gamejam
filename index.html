@@ -13,6 +13,8 @@
   <title>IsleideVerse</title>
 
   <link rel="stylesheet" href="styles.css">
+  <script src="challenge.js" defer></script>
+  <script src="battle.js" defer></script>
 </head>
 
 <body>
@@ -113,7 +115,7 @@
             placeholder="RESPOSTA"
           >
 
-          <button id="btnVerificar">
+          <button id="btnVerificar" onclick="verificarResposta()">
             OK
           </button>
 
@@ -121,6 +123,35 @@
 
       </div>
 
+    </div>
+
+    <!-- POPUP DE RESULTADO -->
+    <div class="resultado-overlay" id="resultadoPopup">
+      <div class="resultado-popup" id="textoResultado">
+        ACERTOU!
+      </div>
+    </div>
+
+    <!-- TELA DE VITORIA -->
+    <div class="tela-final tela-vitoria" id="telaVitoria">
+      <div class="tela-final-caixa">
+        <h2>VOCE VENCEU!</h2>
+        <p>A batalha acabou por enquanto.</p>
+        <button class="botao-retornar" id="btnVoltarVitoria">
+          RETORNAR
+        </button>
+      </div>
+    </div>
+
+    <!-- TELA DE DERROTA -->
+    <div class="tela-final tela-derrota" id="telaDerrota">
+      <div class="tela-final-caixa">
+        <h2>VOCE PERDEU!</h2>
+        <p>Tenta de novo que agora vai.</p>
+        <button class="botao-retornar" id="btnVoltarDerrota">
+          RETORNAR
+        </button>
+      </div>
     </div>
 
   </div>
