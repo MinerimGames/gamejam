@@ -4,6 +4,7 @@
 <head>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 
   <meta charset="UTF-8">
@@ -21,19 +22,37 @@
     <!-- STATUS INIMIGO -->
     <div class="caixa inimigo">
       <div class="caixa-nome">Isleide Newton</div>
-      <div class="caixa-level">NÍVEL 12</div>
+
+      <div class="caixa-level">
+        NÍVEL 1
+      </div>
+
       <div class="caixa-vida">
-        <span></span>
+        <span id="vidaInimigo"></span>
+      </div>
+
+      <div class="texto-hp">
+        HP: <span id="hpInimigo">100</span>/100
       </div>
     </div>
 
     <!-- STATUS PLAYER -->
     <div class="caixa personagem-status">
+
       <div class="caixa-nome">Isleide</div>
-      <div class="caixa-level">NÍVEL 9</div>
-      <div class="caixa-vida">
-        <span></span>
+
+      <div class="caixa-level">
+        NÍVEL 1
       </div>
+
+      <div class="caixa-vida">
+        <span id="vidaPlayer"></span>
+      </div>
+
+      <div class="texto-hp">
+        HP: <span id="hpPlayer">100</span>/100
+      </div>
+
     </div>
 
     <!-- PLAYER -->
@@ -46,34 +65,65 @@
       <img src="assets/Newton0.png" alt="Inimigo">
     </div>
 
-    <!-- MENU -->
+    <!-- MENU 2x2 -->
     <div class="caixa-acoes">
 
-      <div class="caixa-texto">
-        RESOLVA A CONTA!
-      </div>
-
-      <div class="desafio-matematico">
-        <span id="slotX">?</span>
-        <span id="slotOperacao">+</span>
-        <span id="slotY">?</span>
-      </div>
-
-      <input type="number" id="respostaUsuario" placeholder="RESPOSTA">
-
-      <button class="botao-acao" onclick="verificarResposta()">
-        RESPONDER
+      <button class="botao-acao">
+        ATAQUE
       </button>
 
-      <button class="botao-acao" onclick="desafio(1)">
-        INICIAR
+      <button class="botao-acao">
+        CURA
+      </button>
+
+      <button class="botao-acao">
+        DEFESA
+      </button>
+
+      <button class="botao-acao">
+        ESQUIVA
       </button>
 
     </div>
 
-  </div>
+    <!-- POPUP -->
+    <div class="popup-overlay">
 
-  <script src="challenge.js"></script>
+      <div class="popup">
+
+        <div class="caixa-texto">
+          RESOLVA A CONTA!
+        </div>
+
+        <div class="desafio-matematico">
+
+          <span id="slotX">?</span>
+
+          <span id="slotOperacao">+</span>
+
+          <span id="slotY">?</span>
+
+        </div>
+
+        <div class="popup-input-area">
+
+          <input
+            type="number"
+            id="respostaUsuario"
+            placeholder="RESPOSTA"
+          >
+
+          <button id="btnVerificar">
+            OK
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
 
 </body>
 
